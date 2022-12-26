@@ -8,10 +8,16 @@ body {
   color: #fff;
 }
 
+section {
+  width: calc(min(100vw, 800px));
+  height: calc(min(100vh, 450px));
+}
+
 .slider {
+  box-sizing: border-box;
   display: flex;
-  width: 800px;
-  height: 450px;
+  height: calc(100vw / 16 * 9);
+  max-height: calc(100% - 76px);
   border: 2px solid;
   position: relative;
   overflow: hidden;
