@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  color: #fff;
+}
+
+.slider {
+  display: flex;
+  width: 800px;
+  height: 450px;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  transition: transform 400ms ease-in-out;
+}
+
+.slide.visible {
+  transform: translateX(0);
+}
+
+.slide.left {
+  transform: translateX(-100%);
+}
+
+.slide.right {
+  transform: translateX(100%);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.left-button, .right-button {
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  cursor: pointer;
+  background: grey;
+  color: inherit;
+  border: 1px solid;
+  font-size: 1rem;
+  font-weight: 900;
+  opacity: .5;
+}
+
+.left-button:hover, .right-button:hover {
+  opacity: 1;
+}
+
+.right-button {
+  right: 0;
+}
+
+.left-button {
+  left: 0;
+}
+
+.image-selectors {
+  width: fit-content;
+  margin: auto;
+}
+
+.image-selectors button {
+  margin: 16px;
+  padding: 12px;
+  border: none;
+}
+
+.selected {
+  background: blue
+}
+
+.image-selectors p {
+  margin: 0;
+  font-size: .9rem;
+  text-align: center;
+}
